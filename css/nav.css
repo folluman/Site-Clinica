@@ -1,0 +1,32 @@
+.nav{
+    height: 5em;
+    background-color: #222831;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1%;
+}
+
+.nav__bar--lista {
+    display: flex;
+    gap: 1em;
+    margin-top: 1%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav__bar--imagens {
+    display: flex;
+    gap: 16px;
+}
+
+.button__reserva {
+    background-color: #31363F;
+    color: white;
+    border-radius: 20px;
+    border-style: none;
+    padding: 2px 20px;
+}
