@@ -13,11 +13,6 @@
     margin-top: 1%;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
 .nav__bar--imagens {
     display: flex;
     gap: 16px;
@@ -29,4 +24,19 @@ a {
     border-radius: 20px;
     border-style: none;
     padding: 2px 20px;
+}
+
+.nav__bar--navegacao {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.nav__bar--navegacao:hover {
+    color: black;
+}
+
+.button__reserva:hover {
+    color: #76ABAE;
+    background-color: #EEEEEE;
 }
