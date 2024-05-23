@@ -1,0 +1,15 @@
+.carousel--inner {
+    width: 20%;
+    height: 20%;
+    text-align: center;
+}
+
+.servicos__titulo {
+    text-align: center;
+}
+
+.servicos__texto-Carousel {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 100px;
+}
