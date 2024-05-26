@@ -1,7 +1,6 @@
-.carousel--inner {
-    width: 20%;
-    height: 20%;
-    text-align: center;
+.body__page-section--servicos {
+    height: 580px;
+    padding: 4%;
 }
 
 .servicos__titulo {
@@ -11,5 +10,22 @@
 .servicos__texto-Carousel {
     display: grid;
     grid-template-columns: 50% 50%;
-    gap: 100px;
+    gap: 200px;
+    align-items: center;
+    
+}
+
+.slide {
+    width: 230px;;
+}
+
+.servicos__texto {
+    margin-left: 100px;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+.carousel-item {
+    width: 225px;
+    height: 290px;
 }

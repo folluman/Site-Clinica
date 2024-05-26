@@ -1,8 +1,10 @@
 @import url(./nav.css);
 @import url(./banner.css);
 @import url(./servicos.css);
+@import url(./sobre.css);
 
 body {
     height: 100%;
     width: 100%;
+    margin: auto;
 }

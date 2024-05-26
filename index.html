@@ -26,48 +26,73 @@
     </nav>
 
     <main class="body__page">
+        <!-- Banner da página -->
         <section class="body__page-section--banner">
             <div class="body__page--barner">
                 <img class="body__page--image" src="./assets/banner 1.svg" alt="banner da página">
             </div>
         </section>
 
+        <!-- Serviços -->
         <section class="body__page-section--servicos">
             <div class="servicos__conteudo">
                 <h2 class="servicos__titulo">SERVIÇOS</h2>
             </div>
             <div class="servicos__texto-Carousel">
-            <p class="servicos__texto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                <div class="carousel--inner">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
+                <p class="servicos__texto">Em nossa clínica oferecemos micropigmentação labial para realçar seus lábios, design de sobrancelhas para aprimorar seus olhos, tratamentos corporais para rejuvenescer a pele, um protocolo de emagrecimento para atingir seus objetivos de perda de peso e tratamentos faciais personalizados. Venha nos visitar e descubra como podemos realçar sua beleza natural. </p>
+            
+
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <img class="d-block w-100" src="./assets/Group 2.svg" alt="First slide">
+                    <img src="./assets/labios.svg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                    <img class="d-block w-100" src="..." alt="Second slide">
+                    <img src="./assets/sobrancelhas.svg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                    <img class="d-block w-100" src="..." alt="Third slide">
+                    <img src="./assets/massagem.svg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="./assets/emagrecimento.svg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="./assets/facial.svg" class="d-block w-100" alt="...">
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only"></span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="visually-hidden"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only"></span>
-                </a>
-                </div>
+                    <span class="visually-hidden"></span>
+                </button>
+            </div>
+        </div>
+        </section>
+
+        <!-- Sobre -->
+        <section class="body__page-section--sobre">
+            <div class="sobre__conteudo">
+                <img src="./assets/profissional.svg" alt="">
+                <div class="sobre__texto">
+                    <h2>SOBRE A CLÍNICA</h2>
+                    <p>A clínica Gabriela Madazio Estética foi criada em 2016 com o objetivo de melhorar a auto estima e o cuidado pessoal de suas clientes.</p>
+                    <h2>SOBRE A PROFISSIONAL</h2>
+                    <p>Me chamo Gabriela, tenho 27 anos sou formada em Estética e Cosmetologia pela faculdade Anhembi Morumbi (2017), sou especialista em sobrancelhas com diversos cursos na área.</p>
                 </div>
             </div>
         </section>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
