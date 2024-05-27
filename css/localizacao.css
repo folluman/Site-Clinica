@@ -1,0 +1,28 @@
+.body__page-section--localizacao {
+    height: 580px;
+    background-color: #31363F;
+    color: white;
+    padding: 4%;
+}
+
+.localizacao__conteudo {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    gap: 150px;
+}
+
+.localizacao__titulo {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+iframe, .localizacao__mapa {
+    width: 350px;
+    height: 350px;
+}
+
+.localizacao__texto {
+    font-size: 1.6em;
+}
+
