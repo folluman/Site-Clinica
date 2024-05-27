@@ -2,9 +2,26 @@
     width: 100%;
     height: 580px;
     background-color: #31363F;
+    
 }
 
 .sobre__conteudo {
     display: grid;
     grid-template-columns: 50% 50%;
+    padding: 8%;
+    align-items: center;
+    color: white;
+}
+
+.sobre__texto {
+    text-align: justify;
+
+}
+
+.clinica__sobre, .profissional__sobre {
+    text-align: center;
+}
+
+.clinica__texto {
+    margin-bottom: 100px;
 }

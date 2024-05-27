@@ -1,0 +1,12 @@
+.body__page-section--dicas {
+    text-align: center;
+    height: 580px;
+    padding: 4%;
+}
+
+.dicas__imagens {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 128px;
+}
