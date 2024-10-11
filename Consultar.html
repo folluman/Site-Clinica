@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar</title>
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon">
+</head>
+<body>
+    <form name="Consultar">
+        <p>Consulte a informações de contato</p>
+        Código: <br/>
+        <input type="number" name="numCod"> <br>
+        Nome: <br/>
+        <input type="text" name="txtNome"> <br>
+        E-mail: <br>
+        <input type="email" name="txtEmail"> <br>
+        Telefone: <br>
+        <input type="text" name="txtTelefone"> <br>
+        Idade: <br>
+        <input type="number" name="intIdade"> <br>
+
+        <input type="button" name="btBuscar" value="Consultar" onclick="buscar(event, this)">
+
+        <input type="reset" value="Limpar">
+    </form>
+
+    <script type="text/javascript">
+        function buscar(event, form){
+
+event.preventDefault();
+
+const codigo = parseInt(document.Consultar.numCod.value);   
+
+if ( codigo != "" ) { 
+        
+        const URL = 'http://localhost/api_Projeto/api/pessoa/' + codigo;
+    
+        fetch( URL , {method: 'GET'} )                        
+            
+            .then(resp => resp.json())                                    
+            .then(data => mostrarResposta(codigo,data))
+            .catch(erro => console.log(erro));  
+                      
+}
+}
+
+function mostrarResposta(codigo,data){
+if (codigo != data.information.codigo){
+    alert("Esse código não existe : " + codigo + " !!");
+}
+else {
+    alert("Os dados foram encontrados");
+    console.log(data) ;
+
+    document.Consultar.txtNome.value = data.information.nome;
+    document.Consultar.txtEmail.value = data.information.email;
+    document.Consultar.txtTelefone.value = data.information.telefone;
+    document.Consultar.intIdade.value = data.information.idade
+}         
+}
+    </script>
+</body>
+</html>

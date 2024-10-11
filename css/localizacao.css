@@ -2,7 +2,7 @@
     height: 580px;
     background-color: #31363F;
     color: white;
-    padding: 5%;
+    padding: 4%;
 }
 
 .localizacao__conteudo {
@@ -14,7 +14,7 @@
 
 .localizacao__titulo {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
 }
 
 iframe, .localizacao__mapa {

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="./css/table.css">
+    <title>Consultar Clientes</title>
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon">
+</head>
+<body>       
+     
+    <div class="tabelaClientes" id = "tabelaClientes"><h2>Registros dos clientes</h2></div>    
+    
+    <script type="text/javascript">            
+        const URL = 'http://localhost/api_Projeto/api/pessoa/';            
+        
+        fetch( URL , {method: 'GET'} )
+                     
+            .then(resp => resp.json())                                    
+            .then(data => mostrarResposta(data))
+            
+            .catch(erro => console.log(erro));         
+           
+        
+        function mostrarResposta(data){
+            console.log(data) ;       
+            if (data.status == "error"){
+                alert("Sem registro de clientes");
+            } else {
+                
+                criarTabela(data.information);
+            }
+        }
+         
+        function criarTabela(conteudo) {
+            
+            var tabela = document.createElement("table");
+            var cabecalho = document.createElement("thead");
+            var corpo = document.createElement("tbody");
+
+           
+            var tr = document.createElement("tr");
+            
+            var thCodigo = document.createElement("th");
+            var thNome = document.createElement("th");
+            var thEmail = document.createElement("th");
+            var thTelefone = document.createElement("th");
+            var thIdade = document.createElement("th");
+           
+            
+            thCodigo.appendChild( document.createTextNode("Código") ) ;
+            tr.appendChild(thCodigo);           
+
+            thNome.appendChild( document.createTextNode("Nome") ) ;
+            tr.appendChild(thNome);
+
+            thEmail.appendChild( document.createTextNode("Email") ) ;
+            tr.appendChild(thEmail);            
+            
+            thTelefone.appendChild( document.createTextNode("Telefone") ) ;
+            tr.appendChild(thTelefone);
+
+            thIdade.appendChild( document.createTextNode("Idade") ) ;
+            tr.appendChild(thIdade);
+            
+            
+            
+            cabecalho.appendChild(tr);
+            
+            tabela.appendChild(cabecalho);
+            
+
+            
+            conteudo.forEach(item => {
+                
+                var tr = document.createElement("tr");
+                
+                var tdCod = document.createElement("td");
+                var textoRA = document.createTextNode(item.codigo);
+                tdCod.appendChild(textoRA);
+                tr.appendChild(tdCod);
+                
+                var tdNome = document.createElement("td");
+                var textoNome = document.createTextNode(item.nome);
+                tdNome.appendChild(textoNome);
+                tr.appendChild(tdNome);
+
+                var tdIdade = document.createElement("td");
+                var textoIdade = document.createTextNode(item.idade);
+                tdIdade.appendChild(textoIdade);
+                tr.appendChild(tdIdade);
+                
+                var tdEmail = document.createElement("td");
+                var textoEmail = document.createTextNode(item.email);
+                tdEmail.appendChild(textoEmail);
+                tr.appendChild(tdEmail);
+                
+                var tdTelefone = document.createElement("td");
+                var textoTelefone = document.createTextNode(item.telefone);
+                tdTelefone.appendChild(textoTelefone);
+                tr.appendChild(tdTelefone); 
+                
+                corpo.appendChild(tr);
+            });  
+             
+            tabela.appendChild(corpo);            
+
+            document.getElementById("tabelaClientes").appendChild(tabela);
+        }
+    </script>
+</body>
+</html>
